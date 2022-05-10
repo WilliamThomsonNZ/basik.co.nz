@@ -1,0 +1,168 @@
+.preloaderContainer {
+  height: 100vh;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h6 {
+    color: #fff;
+    font-size: 40px;
+    font-family: Poppins;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+    transform-origin: top left;
+  }
+}
+.preloaderInnerContainer {
+  width: 70vw;
+  height: 50vh;
+}
+.loaderTextContainer {
+  overflow: hidden;
+  height: 45px;
+  margin-bottom: 20px;
+}
+.imageOuterContainer {
+  z-index: 1;
+  position: absolute;
+  img {
+    object-fit: cover;
+    height: 100vh !important;
+    width: 100vw !important;
+  }
+}
+
+.mainContainer {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  height: 100vh;
+  padding: 35px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .basikLogo {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 35px;
+    letter-spacing: 0.01em;
+  }
+  .comingSoonText {
+    font-size: 56px;
+    line-height: 130.5%;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+  .copyText {
+    font-size: 14px;
+    line-height: 202.5%;
+    margin: 0;
+    margin-bottom: 80px;
+    letter-spacing: 0.01em;
+    .instaLink {
+      font-weight: bold;
+      display: inline-block;
+      padding-bottom: 0px;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  .emailInput {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: none;
+    width: 100%;
+    padding: 0.5rem 0;
+    position: relative;
+    font-family: "Inter";
+    font-size: 16px;
+    line-height: 1.9;
+    color: #fff;
+  }
+  .underline {
+    width: 0;
+    height: 1px;
+    background: #000;
+  }
+  .emailInput::placeholder {
+    color: #fff;
+    font-family: "Inter";
+    font-size: 14px;
+  }
+  .emailContainer {
+    position: relative;
+  }
+  .emailButton {
+    position: absolute;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    right: 0px;
+    top: 6px;
+    padding: 0;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    span,
+    .footerLink {
+      font-size: 12px;
+    }
+  }
+}
+.imageInnerContainer {
+  overflow: hidden;
+}
+@media (min-width: 1000px) {
+  .mainContainer {
+    width: 0;
+    opacity: 0;
+    max-width: 850px;
+    padding: 100px;
+    background: #f6f6f6;
+    color: #000;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    .basikLogo {
+      font-size: 45px;
+    }
+    .comingSoonText {
+      font-size: 95px;
+      line-height: unset;
+    }
+    .copyText {
+      font-size: 18px;
+      max-width: 600px;
+      .instaLink {
+      }
+    }
+    .footer {
+      max-width: 350px;
+      span,
+      .footerLink {
+        font-size: 14px;
+      }
+    }
+    .emailContainer {
+      max-width: 600px;
+    }
+    .emailInput {
+      color: #000;
+    }
+    .emailInput::placeholder {
+      color: #000;
+    }
+  }
+}

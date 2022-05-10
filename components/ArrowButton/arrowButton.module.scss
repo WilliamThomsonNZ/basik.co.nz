@@ -1,0 +1,54 @@
+.button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-top: 0;
+  padding: 0;
+  font-size: 32px;
+  position: relative;
+  font-weight: 500;
+  padding-bottom: 5px;
+
+  color: #fff;
+  .arrowIcon {
+    color: #fff;
+  }
+
+  font-family: "Arimo", sans-serif;
+  .arrowIcon {
+    font-size: 14px;
+    font-weight: lighter;
+    display: block;
+    transform: rotate(-90deg);
+    color: #fff;
+    &:first-of-type {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.arrowContainer {
+  //   transform: rotate(45deg);
+  display: inline-block;
+  margin-left: 8px;
+  width: 14px;
+  height: 23px;
+  overflow: hidden;
+}
+// @include breakpoint($medium) {
+//   .button {
+//     //font-weight: 700;
+//     font-size: 18px;
+//     .arrowIcon {
+//       font-size: 16px;
+//     }
+//   }
+// }
+
+@media (min-width: 768px) {
+  .button {
+    .arrowIcon {
+      color: #000;
+    }
+  }
+}

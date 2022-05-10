@@ -168,6 +168,9 @@
     height: 50vh;
   }
   .mainContainer {
+    .underline {
+      background: black;
+    }
     width: 0;
     opacity: 0;
     max-width: 850px;

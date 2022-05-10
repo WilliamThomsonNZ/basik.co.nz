@@ -10,6 +10,8 @@ import { variants, mobileVariants } from "../variants";
 export default function Home() {
   const [animationRunning, setAnimationRunning] = useState(true);
   const [userEmail, setUserEmail] = useState("");
+  const [signUpMessage, setSignUpMessage] = useState("Email signed up ✓");
+  const [showMessage, setShowMessage] = useState(false);
   //INTRO SCREEN
   //Img zoom out
   //White comes over and text pops up.
@@ -32,10 +34,14 @@ export default function Home() {
     });
     const json = await response.json();
     if (json.code === 200) {
-      setUserEmail("Email address added");
+      setSignUpMessage("Email signed up ✓");
     } else {
-      setUserEmail("Error adding email address");
+      setSignUpMessage("Error adding email address");
     }
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 6000);
   }
   return (
     <motion.div className={styles.container}>
@@ -139,6 +145,14 @@ export default function Home() {
                 >
                   <ButtonArrow cb={subcribeEvent} />
                 </motion.div>
+                <motion.span
+                  variants={variants.signUpMessage}
+                  className={`${styles.signUpMessage} ${
+                    showMessage ? styles.showMessage : undefined
+                  }`}
+                >
+                  {signUpMessage}
+                </motion.span>
               </div>
             </motion.div>
 

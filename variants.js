@@ -55,9 +55,9 @@ export const variants = {
       width: "900px",
       opacity: 1,
       transition: {
-        delay: 0.5,
+        delay: 0.75,
         duration: 1.25,
-        ease: [0.76, 0, 0.24, 1],
+        ease: [0.33, 1, 0.68, 1],
       },
     },
   },

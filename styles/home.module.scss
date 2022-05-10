@@ -80,7 +80,6 @@
 
   .emailInput {
     border: none;
-    border-bottom: 1px solid #fff;
     background: none;
     width: 100%;
     padding: 0.5rem 0;
@@ -94,7 +93,7 @@
   .underline {
     width: 0;
     height: 1px;
-    background: #000;
+    background: white;
   }
   .emailInput::placeholder {
     color: #fff;
@@ -149,6 +148,9 @@
   }
 }
 @media (min-width: 1000px) {
+  .underline {
+    background: black;
+  }
   .loaderTextContainer {
     height: 45px;
     margin-bottom: 20px;

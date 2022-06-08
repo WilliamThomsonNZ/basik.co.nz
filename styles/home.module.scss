@@ -42,11 +42,11 @@
 .mainContainer {
   position: relative;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  background-color: #f6f6f6;
+  color: #000;
   height: 100vh;
-  padding: 35px;
-  width: 100%;
+  //padding: 35px;
+  width: 0;
   max-width: 100vw;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,7 @@
     margin-top: 0;
     font-weight: 400;
     font-size: 35px;
+    padding: 35px;
     letter-spacing: 0.01em;
   }
   .comingSoonText {
@@ -64,6 +65,7 @@
     letter-spacing: 0.01em;
     margin: 0;
     margin-bottom: 60px;
+    padding: 0 35px;
   }
   .copyText {
     font-size: 14px;
@@ -71,6 +73,7 @@
     margin: 0;
     margin-bottom: 80px;
     letter-spacing: 0.01em;
+    padding: 0 35px;
     .instaLink {
       font-weight: bold;
       display: inline-block;
@@ -87,21 +90,22 @@
     font-family: "Inter";
     font-size: 14px;
     line-height: 1.9;
-    color: #fff;
+    color: #000;
     border-radius: 0;
   }
   .underline {
     width: 0;
     height: 1px;
-    background: white;
+    background: #000;
   }
   .emailInput::placeholder {
-    color: #fff;
+    color: #000;
     font-family: "Inter";
     font-size: 14px;
   }
   .emailContainer {
     position: relative;
+    padding: 0 35px;
   }
   .emailButton {
     position: absolute;
@@ -116,6 +120,7 @@
   .footer {
     display: flex;
     justify-content: space-between;
+    padding: 35px;
     span,
     .footerLink {
       font-size: 12px;
@@ -182,19 +187,23 @@
     top: 0;
     .basikLogo {
       font-size: 45px;
+      padding: 0;
     }
     .comingSoonText {
-      font-size: 95px;
+      font-size: 109px;
       line-height: unset;
+      padding: 0;
     }
     .copyText {
       font-size: 18px;
       max-width: 600px;
+      padding: 0;
       .instaLink {
       }
     }
     .footer {
       max-width: 350px;
+      padding: 0;
       span,
       .footerLink {
         font-size: 14px;
@@ -202,6 +211,7 @@
     }
     .emailContainer {
       max-width: 600px;
+      padding: 0;
     }
     .emailInput {
       color: #000;

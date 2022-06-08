@@ -6,15 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import ButtonArrow from "../components/ArrowButton";
 import { variants, mobileVariants } from "../variants";
+import useWindowWidth from "../hooks/useWindowWidth";
 
 export default function Home() {
   const [animationRunning, setAnimationRunning] = useState(true);
   const [userEmail, setUserEmail] = useState("");
   const [signUpMessage, setSignUpMessage] = useState("Email signed up ✓");
   const [showMessage, setShowMessage] = useState(false);
-  //INTRO SCREEN
-  //Img zoom out
-  //White comes over and text pops up.
+  const width = useWindowWidth();
 
   useEffect(() => {
     setTimeout(() => {
@@ -54,7 +53,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <motion.div className={styles.imageOuterContainer} variants>
+      <motion.div className={styles.imageOuterContainer}>
         <motion.div
           className={styles.imageInnerContainer}
           variants={variants.imageScale}
@@ -64,7 +63,7 @@ export default function Home() {
           <Image src={background} />
         </motion.div>
       </motion.div>
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter={width > 1000 ? false : true}>
         {animationRunning ? (
           <motion.div
             className={styles.preloaderContainer}
@@ -77,20 +76,18 @@ export default function Home() {
             <motion.div className={styles.preloaderInnerContainer}>
               <div className={styles.loaderTextContainer}>
                 <motion.h6 variants={variants.preloaderText1}>
-                  Creating uinque brands is
+                  Try to get outside
                 </motion.h6>
               </div>
               <div className={styles.loaderTextContainer}>
-                <motion.h6 variants={variants.preloaderText2}>
-                  what we do
-                </motion.h6>
+                <motion.h6 variants={variants.preloaderText2}>more.</motion.h6>
               </div>
             </motion.div>
           </motion.div>
         ) : (
           <motion.main
             className={styles.mainContainer}
-            variants={window.innerWidth > 1000 ? variants.main : ""}
+            variants={width > 1000 ? variants.main : variants.mainMobile}
             initial={"initial"}
             animate={"Animate"}
             key={"main"}
@@ -98,9 +95,13 @@ export default function Home() {
             <div className={styles.comingSoonTextContainer}>
               <motion.h2
                 className={styles.basikLogo}
-                variants={variants.textContainer}
+                variants={
+                  width > 1000
+                    ? variants.textContainer
+                    : variants.textContainerMobile
+                }
               >
-                Basik
+                basik
               </motion.h2>
             </div>
 
@@ -111,20 +112,33 @@ export default function Home() {
             >
               <motion.h6
                 className={styles.comingSoonText}
-                variants={variants.textContainer}
+                variants={
+                  width > 1000
+                    ? variants.textContainer
+                    : variants.textContainerMobile
+                }
                 key={"comingSoon"}
               >
                 Coming Soon
               </motion.h6>
               <motion.p
                 className={styles.copyText}
-                variants={variants.textContainer}
+                variants={
+                  width > 1000
+                    ? variants.textContainer
+                    : variants.textContainerMobile
+                }
                 key={"p"}
               >
-                We support indivduals and businesses with multi media services
-                to help them acheive their digitial goals. Our site is launcing
-                soon so in the meantime follow us on{" "}
-                <a href="#" className={styles.instaLink}>
+                We believe getting outside of your comfort zone is where
+                individuals and businesses grow. Our online presence is
+                launching soon so in the meantime follow us on{" "}
+                <a
+                  href={"https://www.instagram.com/basikcollective/"}
+                  className={styles.instaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Instagram
                 </a>{" "}
                 or subscribe below for updates.{" "}
@@ -135,7 +149,11 @@ export default function Home() {
                   type={"email"}
                   className={styles.emailInput}
                   placeholder={"Email"}
-                  variants={variants.textContainer}
+                  variants={
+                    width > 1000
+                      ? variants.textContainer
+                      : variants.textContainerMobile
+                  }
                   onChange={(e) => setUserEmail(e.target.value)}
                   value={userEmail}
                 />
@@ -145,7 +163,11 @@ export default function Home() {
                 ></motion.div>
                 <motion.div
                   className={styles.emailButton}
-                  variants={variants.textContainer}
+                  variants={
+                    width > 1000
+                      ? variants.textContainer
+                      : variants.textContainerMobile
+                  }
                 >
                   <ButtonArrow cb={subcribeEvent} />
                 </motion.div>
@@ -165,7 +187,12 @@ export default function Home() {
               variants={variants.textContainer}
             >
               <span>&#xa9;Basik 2022. All Rights Resevered</span>
-              <a href={"#"} className={styles.footerLink}>
+              <a
+                href={"https://www.instagram.com/basikcollective/"}
+                className={styles.footerLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Instagram
               </a>
             </motion.footer>

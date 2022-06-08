@@ -8,10 +8,11 @@
   position: relative;
   font-weight: 500;
   padding-bottom: 5px;
-
-  color: #fff;
+  padding-left: 50px;
+  padding: 0 35px;
+  color: #000;
   .arrowIcon {
-    color: #fff;
+    color: #000;
   }
 
   font-family: "Arimo", sans-serif;
@@ -20,7 +21,7 @@
     font-weight: lighter;
     display: block;
     transform: rotate(-90deg);
-    color: #fff;
+    color: #000;
     &:first-of-type {
       margin-bottom: 10px;
     }
@@ -50,5 +51,11 @@
     .arrowIcon {
       color: #000;
     }
+  }
+}
+
+@media (min-width: 1000px) {
+  .button {
+    padding-right: 0;
   }
 }

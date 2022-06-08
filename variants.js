@@ -14,6 +14,21 @@ export const variants = {
       },
     },
   },
+  preloaderContainerMobile: {
+    intiial: {
+      y: 0,
+    },
+    Animate: {
+      y: 0,
+    },
+    exit: {
+      y: "-100vh",
+      transition: {
+        duration: 1.5,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    },
+  },
   preloaderText1: {
     initial: {
       skewY: 10,
@@ -50,7 +65,6 @@ export const variants = {
     intiial: {
       width: 0,
     },
-
     Animate: {
       width: "900px",
       opacity: 1,
@@ -61,6 +75,20 @@ export const variants = {
       },
     },
   },
+  mainMobile: {
+    intiial: {
+      width: 0,
+    },
+    Animate: {
+      width: "100vw",
+      opacity: 1,
+      transition: {
+        duration: 1.25,
+        ease: [0.33, 1, 0.68, 1],
+      },
+    },
+  },
+
   imageScale: {
     initial: {
       scale: 1.1,
@@ -85,6 +113,20 @@ export const variants = {
         duration: 1.5,
         ease: [0.33, 1, 0.68, 1],
         delay: 1.65,
+      },
+    },
+  },
+  textContainerMobile: {
+    initial: {
+      opacity: 0,
+    },
+    Animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+        duration: 1.5,
+        ease: [0.33, 1, 0.68, 1],
+        delay: 1.25,
       },
     },
   },

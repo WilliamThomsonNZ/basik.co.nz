@@ -48,8 +48,8 @@ export default function Home() {
         <title>Basik</title>
         <meta
           name="description"
-          content="Basik - We support indivduals and businesses with multi media services
-                to help them acheive their digitial goals."
+          content="Basik - We believe getting outside of your comfort zone is where
+          individuals and businesses grow."
         />
         <link rel="icon" href="/favicon.png" />
       </Head>

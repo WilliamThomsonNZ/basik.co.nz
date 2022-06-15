@@ -13,7 +13,7 @@ const ButtonArrow = ({
   const [hover, setHover] = useState(false);
   const arrowVariants = {
     stopHover: {
-      x: -7,
+      x: -3,
       y: 4,
       rotate: 45,
       transition: {
@@ -23,8 +23,8 @@ const ButtonArrow = ({
       },
     },
     startHover: {
-      x: 10,
-      y: -16,
+      x: 18,
+      y: -20,
       rotate: 45,
       transition: {
         duration: 0.5,

@@ -13,8 +13,8 @@ const ButtonArrow = ({
   const [hover, setHover] = useState(false);
   const arrowVariants = {
     stopHover: {
-      x: -3,
-      y: 4,
+      x: -6,
+      y: -2,
       rotate: 45,
       transition: {
         duration: 0.5,
@@ -48,6 +48,7 @@ const ButtonArrow = ({
         <motion.div
           className={styles.arrowSlider}
           variants={arrowVariants}
+          initial={"stopHover"}
           animate={hover ? "startHover" : "stopHover"}
         >
           <FontAwesomeIcon icon={faArrowRight} className={styles.arrowIcon} />
